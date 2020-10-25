@@ -1,0 +1,170 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Index.php */
+
+body{
+	background-size: cover;
+	display: flex;
+	background-repeat: no-repeat;
+	font-family: sans-serif;
+	overflow: hidden;
+}
+
+
+.absolute{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	filter: brightness(.3);
+}
+
+
+.container{
+	width: 100vw;
+	height: 100%;
+	padding: 20px 0;
+	
+	font-family: 'Courgette', cursive;
+	text-align: center;
+
+	z-index: 1;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.container p{
+	font-size: 50px;
+	margin-top: 7vh;
+	padding: 140px 50px;
+	border-radius: 50%;
+	box-sizing: unset;
+
+	/* background-color: salmon; */
+	border: 5px solid white;
+	background-color: rgba(255, 255, 255, 0.034);
+	align-items: center;
+}
+
+.animation{
+	animation: terbang 5s infinite;
+}
+
+.container b{
+	color: rgb(177, 218, 228);
+}
+
+.container span{
+	color :white;
+}
+
+/* Navigasi */
+nav{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: transparent;
+	padding: 20px;
+}
+
+nav a{
+	color: black;
+	text-decoration: none;
+	background-color: rgba(210,210,210,1);
+	padding: 5px 20px;
+
+}
+
+
+
+
+/* Social Media */
+.socialmedia{
+	/* display: flex;
+	justify-content: center;
+	border-bottom: 2px solid gray;
+	padding-bottom: 15px;
+	margin-bottom: 30px;
+	position: fixed;
+	text-align: center;
+	width: 100%; */
+	display: flex;
+	justify-content: center;
+	border-bottom: 2px solid gray;
+	padding-bottom: 15px;
+
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	margin-bottom: 30px;
+	z-index: 999;
+	
+}
+
+.soc{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	text-align: center;
+	margin: 0 15px;
+	width: min-content;
+}
+
+.soc span{
+	color: white;
+	font-size: 10px;
+	width: 100%;
+	font-family: 'Lobster', cursive;
+}
+
+
+.socialmedia i{
+	font-size: 45px;
+	color: gray;
+	transition: 0.3s;
+	cursor: pointer;
+	width: 100%;
+}
+
+.socialmedia i:hover{
+	color : white;
+	transform: translate(0, -10px) scale(1.1);
+}
+
+
+
+
+
+/* ===================== END =================*/
+
+
+/* Animasi */
+
+@keyframes terbang {
+	0%{
+		transform: translate(0,-10px)  rotate(-5deg);
+		
+	} 
+	30%{
+		transform: rotate(-15deg);
+	}
+	75%{
+		transform: translate(0,10px)  rotate(5deg);
+	}
+	100%{
+		transform: translate(0,-10px)  rotate(-5deg);
+	
+	}
+}
+
+
+
+
+
+
