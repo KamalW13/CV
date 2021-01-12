@@ -1,0 +1,302 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	background-color: black;
+	color: white;
+	/*width: 100vw;
+	height: 100vh;*/
+}
+
+body img{
+	position: absolute;
+	right: 5vw;
+	filter: contrast();
+}
+
+
+
+/*Nav bar*/
+nav{
+	width: 100%;	
+	font-size: 1.5em;
+	padding: 20px 0;
+}
+
+nav i{
+	float: left;
+	padding: 0 20px;
+	margin-right: 25px;
+	cursor: pointer;
+	z-index: 2;
+	transition: .3s;
+	display: block;
+}
+
+nav .navbar{
+	transform: translateX(-100vw);
+	font-size: 12px;
+	z-index: 1;
+	transition: .5s;
+}
+
+nav .navbar i{
+	display: none;
+}
+
+nav .navbar ul li{
+	display: inline-block;
+	padding: 0 25px;
+	list-style-type: none;
+	font-weight: lighter;
+	font-family: arial;
+	text-transform: uppercase;
+	border-right: 1px solid white;
+	cursor: pointer;
+}
+
+.navbar ul li span{
+	padding: 10px;
+}
+
+.navbar ul li span:hover{
+	border: 1px solid white;
+}
+
+
+
+@media (max-width: 730px){
+
+	nav .navbar{
+		transform: translate(0, -100vh);
+	}
+
+	nav .navbar i {
+		padding: 0 20px;
+		margin-right: 25px;
+		cursor: pointer;
+		z-index: 2;
+		transition: .3s;
+		display: block;
+		font-size: 2em;
+		transform: rotate(90deg);
+	}
+
+	nav .navbar{
+		width: 100vw;
+		height: 100vh;
+		position: absolute;
+		background-color: rgba(0, 0, 0, .8);
+	}
+
+	nav ul{
+		text-align: center;
+	}
+
+	nav .navbar ul li{
+		display: block;
+		width: 100vw;
+		border: none;
+		margin: 15% 0;
+		font-size: 2em;
+		font-weight: bold;
+	}
+}
+
+
+
+
+
+
+
+/* Main */
+main{
+	transition: .5s;
+}
+
+
+
+main .text{
+	font-size: 4em;
+	font-weight: bold;
+	padding: 10vh 100px 5vh;
+	font-family: arial;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-fill-color: transparent;
+}
+
+.text span{
+	-webkit-text-fill-color: rgb(188, 66, 71);
+	-webkit-text-stroke-width: 0;
+}
+
+span.myname span:hover{
+	-webkit-text-fill-color:white;
+	cursor: pointer;
+}
+
+main button{
+	margin-left: 200px;
+	padding: 10px 30px;
+	border-radius: 30px;
+	border: 1px solid rgb(133, 97, 97);
+	background-color: transparent;
+	color: white;
+	outline: none;
+	text-transform: uppercase;
+	font-weight: bolder;
+	transition: .3s;
+}
+
+main button:hover{
+	background-color: rgb(207, 207, 207);
+	color: black;
+	cursor: pointer;
+}
+
+div.hubungi{
+	position: absolute;
+	padding: 17vh 100px 5vh;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	font-size: 2.3em;
+	transform: translateX(-100vw);
+	/* background-color: black; */
+	height: 100vh;
+	transition: .5s;
+	z-index: -1;
+	color: white;
+}
+
+div.hubungi h1{
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-fill-color: transparent;
+	font-family: arial;
+}
+
+div.hubungi h2{
+	color:rgb(188, 66, 71);
+	font-weight: bold;
+}
+
+div.hubungi .link{
+	margin: 3em 0 0;
+}
+
+div.hubungi .link a{
+	display: inline-block;
+	padding: 10px 15px;
+	border: 1px solid white;
+	border-radius: 50%;
+	color: white;
+	margin: 0 20px;
+	cursor: pointer;
+	transition: .5s;
+}
+
+div.hubungi .link a:hover{
+	background-color: white;
+	transform: translateY(-5px);
+}
+div.hubungi .link a:hover i{
+	color: black;
+}
+
+a.email{
+	background-color: white;
+}
+a.email:hover{
+	background-color: black;
+}
+a.email:hover i{
+	color: white;
+}
+
+a.email i{
+	color: black;
+}
+
+div.hubungi .link ul li a{
+	/* color: white; */
+}
+
+@media (max-width: 730px){
+	main{
+		text-align: center;
+	}
+
+	main img{
+		width: 70%;
+		margin: 0;
+		transform: translate(-10vw, 0);
+	}
+
+	main .text{
+		text-align: center;
+		font-size: 2.5em;
+		padding: 25vh 100px 5vh;
+	}
+
+	body{
+		width: 100vw;
+		height: 100vh;
+		overflow: hidden;
+	}
+
+	body img{
+		z-index: -1;
+	}
+
+	main button{
+		margin:0
+	}
+
+	div.hubungi{
+		text-align: center;
+		font-size: 1.3em;
+		/* padding: 40vh 100px 5vh; */
+	}
+	div.hubungi h2{
+		font-size: 1em;
+		margin-bottom: 10px;
+	}
+	div.hubungi .link{
+		background-color: #fff;
+		cursor: pointer;
+		z-index: 999;
+	}
+	div.hubungi .link a{
+		margin: 0 10px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+.translate{
+	transform: translate(0, 0) !important;
+}
+
+.hide{
+	display: none;
+}
+
+.rotate15{
+	transform: rotate(90deg);
+}
+
+.scaleOut{
+	transform: scale(0);
+	display: none;
+
+}
